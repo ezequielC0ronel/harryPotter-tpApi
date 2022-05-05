@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio complementario - AJAX</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <form action="" id="formulario">
+        <div>
+          <input
+            type="radio"
+            name="magos"
+            id="solo-magos"
+            value="solo-magos"
+            checked
+          />
+          <label for="solo-magos">Mostrar solo magos</label>
+        </div>
+
+        <div>
+          <input type="radio" name="magos" id="no-magos" value="no-magos" />
+          <label for="no-magos">Mostrar No magos</label>
+        </div>
+
+        <div>
+          <label for="fecha-nacimiento">Fecha de nacimiento</label>
+          <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" />
+        </div>
+
+        <div>
+          <label for="sin-fecha">Traer personajes sin fecha de nacimiento</label>
+          <input type="checkbox" name="sin-fecha" id="sin-fecha" />
+        </div>
+
+        <input
+          type="button"
+          value="Buscar"
+          onclick="mostrarPersonajesFiltrados()"
+        />
+      </form>
+
+      <div id="cards"></div>
+    </div>
+  </body>
+</html>
